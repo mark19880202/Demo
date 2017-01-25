@@ -1,1 +1,84 @@
-.main-container{width:100%;height:100%}
+.main-container{
+	width:100%;
+	height:100%;
+}
+.home-header, .page-header{
+	width: 100%;
+	height: 6%;
+	padding: 5px;
+	position: fixed;
+	z-index: 10;
+	background-color: #FFFFFF;
+	top: 0px
+}
+.page-header{
+	text-align: center;
+}
+.home-container, .page-full-context{
+	width: 97%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	overflow-y: auto;
+}
+.home-footer, .page-footer{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	position: fixed;
+	bottom: 0px;
+	z-index: 10;
+	background-color: #FFFFFF;
+}
+.page-short-foot, .page-short-headerP{
+	width: 100%;
+	height: 20%;
+}
+.page-short-container{
+	width: 100%;
+	height: 60%;
+}
+.link-page{
+	color: #000000;
+	text-decoration: none;
+}
+.page-footer-btn{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.header-search-bar{
+	width: 90%;
+	height: 100%;
+}
+.header-icon{
+	width: 5%;
+	height: 100%;
+	position: absolute;
+	right: 30px;
+    top: 15px;
+}
+.page-short-context{
+	width: 97%;
+	max-height: 20%;
+	border: 1px solid #000000;
+	height: 100%;
+	margin: 5px;
+}
+.back-icon:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin: -8px 0 0;
+	left: 8px;
+	width: 7px;
+	height: 7px;
+	border-width: 0 3px 3px 0;
+	border-style: solid;
+	border-color: #000000;
+	margin-top: -5px;
+	background: transparent;
+	transform: rotate(135deg);
+
+}

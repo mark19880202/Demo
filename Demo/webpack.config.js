@@ -1,6 +1,10 @@
 "use strict";
 
 var webpack = require("webpack");
+
+var argv = require("minimist")(process.argv.slice(2));
+var DEBUG = !argv.release;
+
 var config = {
     entry:{
         desktop: "./app/js/index.js"
@@ -9,6 +13,13 @@ var config = {
         path: "./app/js/",
         publicPath: "./app/js/",
         filename: "main.js"
+    },
+    cache: DEBUG,
+    debug: DEBUG,
+    devtool: DEBUG ? "#inline-source-map" : false,
+    stats:{
+        colors: true,
+        reason: DEBUG
     },
     resolve:{},
     module: {
@@ -35,9 +46,6 @@ var config = {
         ]
     },
     plugins:[
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.ProvidePlugin({
             "$": "jquery",

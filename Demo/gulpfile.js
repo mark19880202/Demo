@@ -53,7 +53,7 @@ gulp.task("webpack", function(cb){
 		}
 
 		if(stats.hasErrors()){
-			gutil.log("[webpack error]", stats.compilation.error[0].message);
+			gutil.log("[webpack error]", stats.toString());
 		}
 		if(argv.verbose){
 			console.log("[webpack]", stats.toString());
